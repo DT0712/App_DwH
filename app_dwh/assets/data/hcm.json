@@ -1,0 +1,36 @@
+{
+  "id": "hcm",
+  "name": "TP. Hồ Chí Minh",
+  "imageAsset": "assets/images/tphcm.jpg",
+  "description": "TP. Hồ Chí Minh – trung tâm kinh tế, văn hóa và du lịch sôi động nhất Việt Nam – là nơi giao thoa giữa hiện đại và truyền thống, nổi bật với lịch sử phong phú, kiến trúc đa dạng và đời sống về đêm náo nhiệt. Nằm ở miền Nam Việt Nam, giáp các tỉnh: Tây Ninh, Bình Dương, Đồng Nai, Long An và Tiền Giang.",
+  "destinations": [
+    {
+      "name": "Khu du lịch Bình Quới ",
+      "image": "assets/images/BinhQuoi.png"
+    },
+    {
+      "name": "Cần Giờ ",
+      "image": "assets/images/CanGio.jpg"
+    }
+  ],
+  "events": [
+    {
+      "name": "Lễ hội Nghinh Ông",
+      "date": "15/3 âm lịch"
+    },
+    {
+      "name": "Lễ hội đua ghe ngo",
+      "date": "Tháng 11"
+    }
+  ],
+  "foods": [
+    {
+      "name": "Cua Cà Mau",
+      "image": "assets/images/GGmapHCM.png"
+    },
+    {
+      "name": "Ba khía rang me",
+      "image": "assets/images/ChoBenThanh.jpg"
+    }
+  ]
+}
