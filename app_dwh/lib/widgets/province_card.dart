@@ -5,8 +5,7 @@ class ProvinceCard extends StatelessWidget {
   final Province province;
   final VoidCallback onTap;
 
-  const ProvinceCard({Key? key, required this.province, required this.onTap})
-    : super(key: key);
+  const ProvinceCard({super.key, required this.province, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -16,23 +15,23 @@ class ProvinceCard extends StatelessWidget {
         elevation: 4,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Expanded(
               child: ClipRRect(
                 borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
-                child: Image.asset(
-                  province.imageAsset,
-                  fit: BoxFit.cover,
-                  width: double.infinity,
-                ),
+                child: Image.asset(province.imageAsset, fit: BoxFit.cover),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(8),
+              padding: const EdgeInsets.all(8.0),
               child: Text(
                 province.name,
-                style: TextStyle(fontWeight: FontWeight.bold),
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,
+                ),
+                textAlign: TextAlign.center,
               ),
             ),
           ],

@@ -5,6 +5,7 @@ import '../screens/province_detail_screen.dart';
 import '../widgets/province_card.dart';
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,8 +13,9 @@ class HomeScreen extends StatelessWidget {
       body: FutureBuilder<List<Province>>(
         future: ProvinceService.loadAllProvinces(),
         builder: (context, snapshot) {
-          if (!snapshot.hasData)
+          if (!snapshot.hasData) {
             return Center(child: CircularProgressIndicator());
+          }
           final provinces = snapshot.data!;
           return GridView.builder(
             padding: EdgeInsets.all(10),
@@ -32,7 +34,9 @@ class HomeScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (_) => ProvinceDetailScreen(province: province),
+                      builder:
+                          (_) =>
+                              ProvinceDetailScreen(province: provinces[index]),
                     ),
                   );
                 },
